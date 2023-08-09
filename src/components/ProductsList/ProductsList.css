@@ -1,0 +1,9 @@
+.products-list__title {
+  margin-bottom: 1em;
+}
+
+.products-list__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  grid-gap: 1em;
+}

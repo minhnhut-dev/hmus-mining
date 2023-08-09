@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Work+Sans:wght@300;400;500;600;700&display=swap");
+@import "styling/variables";
+@import "styling/fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--main-txt-color);
+  background-color: var(--main-bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.9em;
+}

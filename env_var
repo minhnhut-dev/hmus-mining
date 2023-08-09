@@ -1,0 +1,5 @@
+REACT_APP_API_TOKEN=Token your-api-token
+REACT_APP_API_URL=https://api.ubiops.com/v2.1
+REACT_APP_PROJECT_NAME=your-project-name
+REACT_APP_DEPLOYMENT_NAME=your-deployment-name
+REACT_APP_DEPLOYMENT_VERSION=your-version-name

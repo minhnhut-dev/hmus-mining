@@ -1,0 +1,16 @@
+.recommendations__title {
+  margin-bottom: 1em;
+}
+
+.recommendations__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.recommendations__list .product-card {
+  margin-right: 1em;
+}
+
+.recommendations__list .product-card:last-child {
+  margin-right: 0;
+}

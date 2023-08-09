@@ -1,0 +1,24 @@
+.secondary-button {
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 0.4em 0.8em;
+  color: inherit;
+  font: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.secondary-button:hover {
+  cursor: pointer;
+  border: 1px solid var(--secondary-color);
+}
+
+.secondary-button__start-icon {
+  margin-right: 0.7em;
+}
+
+.secondary-button__end-icon {
+  margin-left: 0.7em;
+}

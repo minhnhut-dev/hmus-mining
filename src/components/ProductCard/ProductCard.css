@@ -1,0 +1,28 @@
+.product-card {
+  background-color: var(--secondary-bg-color);
+  border: 1px solid var(--secondary-bg-color);
+  border-radius: 5px;
+}
+
+.product-card:hover {
+  border: 1px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+.product-card__illustration {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+}
+
+.product-card__details {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card__price {
+  color: var(--primary-color);
+}
