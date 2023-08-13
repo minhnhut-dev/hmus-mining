@@ -1,106 +1,106 @@
 [{
   "id": 1,
   "name": "mineral water",
-  "image": "",
+  "image": "/images/miner-waterwater.png",
   "description": ""
 }, {
   "id": 2,
   "name": "eggs",
-  "image": "",
+  "image": "/images/eggs.png",
   "description": ""
 }, {
   "id": 3,
   "name": "spaghetti",
-  "image": "",
+  "image": "/images/spaghetti.png",
   "description": ""
 }, {
   "id": 4,
   "name": "french fries",
-  "image": "",
+  "image": "/images/french-fries.png",
   "description": ""
 }, {
   "id": 5,
   "name": "chocolate",
-  "image": "",
+  "image": "/images/chocolate.png",
   "description": ""
 }, {
   "id": 6,
   "name": "green tea",
-  "image": "",
+  "image": "/images/green-tea.png",
   "description": ""
 }, {
   "id": 7,
   "name": "milk",
-  "image": "",
+  "image": "/images/milk.png",
   "description": ""
 }, {
   "id": 8,
   "name": "ground beef",
-  "image": "",
+  "image": "/images/ground-beef.png",
   "description": ""
 }, {
   "id": 9,
   "name": "frozen vegetables",
-  "image": "",
+  "image": "/images/frozen-vegetables.png",
   "description": ""
 }, {
   "id": 10,
   "name": "pancakes",
-  "image": "",
+  "image": "/images/pancakes.png",
   "description": ""
 }, {
   "id": 11,
   "name": "burgers",
-  "image": "",
+  "image": "/images/burgers.png",
   "description": ""
 }, {
   "id": 12,
   "name": "cake",
-  "image": "",
+  "image": "/images/cake.png",
   "description": ""
 }, {
   "id": 13,
   "name": "cookies",
-  "image": "",
+  "image": "/images/cookies.png",
   "description": ""
 }, {
   "id": 14,
   "name": "escalope",
-  "image": "",
+  "image": "/images/escalope.png",
   "description": ""
 }, {
   "id": 15,
   "name": "low fat yogurt",
-  "image": "",
+  "image": "/images/low-fat-yogurt.png",
   "description": ""
 }, {
   "id": 16,
   "name": "shrimp",
-  "image": "",
+  "image": "/images/shrimp.png",
   "description": ""
 }, {
   "id": 17,
   "name": "tomatoes",
-  "image": "",
+  "image": "/images/tomatoes.png",
   "description": ""
 }, {
   "id": 18,
   "name": "olive oil",
-  "image": "",
+  "image": "/images/olive-oil.png",
   "description": ""
 }, {
   "id": 19,
   "name": "frozen smoothie",
-  "image": "",
+  "image": "/images/frozen-smoothie.png",
   "description": ""
 }, {
   "id": 20,
   "name": "turkey",
-  "image": "",
+  "image": "/images/turkey.png",
   "description": ""
 }, {
   "id": 21,
   "name": "chicken",
-  "image": "",
+  "image": "/images/chicken.png",
   "description": ""
 }]

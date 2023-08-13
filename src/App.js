@@ -13,7 +13,7 @@ const App = () => {
       <CartContext.Provider value={cartState}>
         <div className="App">
           <Header />
-          <NavBar />
+          {/* <NavBar /> */}
           <div className="App__content">
             <Switch>
               <Route path="/products/:id">

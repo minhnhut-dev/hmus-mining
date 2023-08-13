@@ -16,9 +16,10 @@ import { CartContext } from "App";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const product = products[id];
+  // const product = products[id];
   const [, setCartItems] = useContext(CartContext);
   const [price, setPrice] = useState(0);
+  const product = products.find(it => it.id === parseInt(id))
 
   useEffect(() => {
     setPrice(generatePrice().toString());
@@ -31,7 +32,7 @@ const ProductDetails = () => {
       </Link>
       <div className="product-details">
         <div className="product-details__illustration">
-          <img src={productImage} alt={product} />
+          <img src={product.image} alt={product.name} />
         </div>
         <div className="product-details__content">
           <h1 className="product-details__title">

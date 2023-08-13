@@ -28,8 +28,8 @@ const Recommendations = ({ product }) => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    postRequest(`http://localhost:5000/recommend`, {
-      clicked_product: product,
+    postRequest(`http://103.166.182.62:5000/recommend`, {
+      clicked_product: product?.name,
     }).then((response) => {
       setLoading(false);
       setRecommendations(response.data);
@@ -39,20 +39,21 @@ const Recommendations = ({ product }) => {
       setRecommendations([]);
     };
   }, [product]);
+
+  let listRecommend = [];
+  recommendations.map((re) => {
+    let data = products.find(it => it.name === re)
+    listRecommend.push(data)
+  });
   
   return (
     <div className="recommendations">
       <h3 className="recommendations__title">Products related to this item</h3>
       <div className="recommendations__list">
         {loading && (
-          // <SkeletonTheme baseColor="#202020" highlightColor="#444">
-          //   <p>
-          //     <Skeleton count={3} />
-          //   </p>
-          // </SkeletonTheme>
-          <p>Loading....</p>
+          <p style={{fontSize: '28px', fontWeight: '700'}}>Loading....</p>
         )}
-        {recommendations.map((recommendation, key) => (
+        {listRecommend.length > 0 && listRecommend.map((recommendation, key) => (
           <ProductCard
             product={recommendation}
             id={products.findIndex((product) => product.name === recommendation)}
