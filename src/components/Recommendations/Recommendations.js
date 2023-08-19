@@ -1,9 +1,9 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect, useState, useContext} from "react";
 import "./Recommendations.css";
 import ProductCard from "components/ProductCard/ProductCard";
 import products from "assets/products.json";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { CartContext } from "App";
 
 // const API_TOKEN = "Token 1fbf77734b75a21c4044c99d263163b8f78be87d"
 // const API_URL = process.env.REACT_APP_API_URL;
@@ -26,10 +26,16 @@ async function postRequest(url = "", data = {}) {
 const Recommendations = ({ product }) => {
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(false);
+  const {cartItems} =  useContext(CartContext);
+
+  const list_clicked_product = cartItems.map((item) => {
+    return item.name
+  })
+
   useEffect(() => {
     setLoading(true);
-    postRequest(`http://103.166.182.62:5000/recommend`, {
-      clicked_product: product?.name,
+    postRequest(`http://127.0.0.1:5001/recommend`, {
+      clicked_product: list_clicked_product,
     }).then((response) => {
       setLoading(false);
       setRecommendations(response.data);

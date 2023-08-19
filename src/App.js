@@ -1,16 +1,27 @@
 import { createContext, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Header, NavBar, ProductsList, ProductDetails } from "components";
+import { Header, ProductsList, ProductDetails } from "components";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const CartContext = createContext([]);
 
 const App = () => {
-  const cartState = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
+  const addToCart = product => {
+    const checkProductExist = cartItems.find(it => it.id === product.id)
+    if (checkProductExist) {
+      return;
+    }else{
+      const newProduct = [...cartItems, product]
+      setCartItems(newProduct);
+    }
+  }
+  
   return (
     <Router>
-      <CartContext.Provider value={cartState}>
+      <CartContext.Provider value={{setCartItems, cartItems, addToCart}}>
         <div className="App">
           <Header />
           {/* <NavBar /> */}

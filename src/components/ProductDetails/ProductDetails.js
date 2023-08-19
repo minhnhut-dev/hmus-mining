@@ -3,7 +3,6 @@ import "./ProductDetails.css";
 import { useParams } from "react-router-dom";
 import { capitalizeFirstLetter, generatePrice } from "utils";
 import products from "assets/products.json";
-import productImage from "assets/images/product.png";
 
 import {
   PrimaryButton,
@@ -16,11 +15,10 @@ import { CartContext } from "App";
 
 const ProductDetails = () => {
   const { id } = useParams();
-  // const product = products[id];
-  const [, setCartItems] = useContext(CartContext);
+  const {addToCart} = useContext(CartContext);
   const [price, setPrice] = useState(0);
   const product = products.find(it => it.id === parseInt(id))
-
+  
   useEffect(() => {
     setPrice(generatePrice().toString());
   }, [id]);
@@ -42,7 +40,7 @@ const ProductDetails = () => {
           <PrimaryButton
             className="product-details__cart-button"
             startIcon="icon-shopping-cart"
-            onClick={() => setCartItems((prevState) => prevState + 1)}
+            onClick={() => addToCart(product)}
           >
             Add to cart
           </PrimaryButton>
