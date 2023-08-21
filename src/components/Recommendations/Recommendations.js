@@ -51,7 +51,7 @@ const Recommendations = ({ product }) => {
     let data = products.find(it => it.name === re)
     listRecommend.push(data)
   });
-  console.log("test jenkins");
+
   return (
     <div className="recommendations">
       <h3 className="recommendations__title">Products related to this item</h3>
