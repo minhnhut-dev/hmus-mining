@@ -28,6 +28,7 @@ async function postRequest(url = "", data = {}) {
 
 app.post('/recommend', (req, res) => { //Line 9
   let params = (req.body.clicked_product);
+  console.log(params);
   postRequest(
     `https://api.ubiops.com/v2.1/projects/recommender/deployments/recommender-model/versions/v1/requests?timeout=3600`,
     { cart_products: params}

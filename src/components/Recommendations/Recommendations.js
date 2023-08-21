@@ -30,7 +30,7 @@ const Recommendations = ({ product }) => {
 
   const list_clicked_product = cartItems.map((item) => {
     return item.name
-  })
+  });
 
   useEffect(() => {
     setLoading(true);
@@ -44,14 +44,14 @@ const Recommendations = ({ product }) => {
     return () => {
       setRecommendations([]);
     };
-  }, [product]);
+  }, [product, cartItems]);
 
   let listRecommend = [];
   recommendations.map((re) => {
     let data = products.find(it => it.name === re)
     listRecommend.push(data)
   });
-  
+  console.log("test jenkins");
   return (
     <div className="recommendations">
       <h3 className="recommendations__title">Products related to this item</h3>
