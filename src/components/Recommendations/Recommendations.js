@@ -52,6 +52,8 @@ const Recommendations = ({ product }) => {
     listRecommend.push(data)
   });
 
+  console.log("test thử ci cd")
+
   return (
     <div className="recommendations">
       <h3 className="recommendations__title">Products related to this item</h3>
