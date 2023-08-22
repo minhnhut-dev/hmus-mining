@@ -2,12 +2,6 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the code from GitHub repository
-                git branch: 'main', url: 'https://github.com/minhnhut-dev/hmus-mining.git'
-            }
-        }
         
         stage('Build') {
             steps {
