@@ -2,6 +2,12 @@ pipeline {
     agent any
     
     stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the code from GitHub repository
+                git branch: 'main', url: 'https://github.com/minhnhut-dev/hmus-mining.git'
+            }
+        }
         
         stage('Build') {
             steps {
@@ -10,5 +16,14 @@ pipeline {
             }
         }
         
+        stage('Push to Docker Hub') {
+            steps {
+                // Push the built image to Docker Hub (replace with your Docker Hub info)
+                withDockerRegistry(credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/') {
+                    sh 'docker tag 22424025 minhnhutdev/22424025:latest'
+                    sh 'docker push minhnhutdev/22424025:latest'
+                }
+            }
+        }
     }
 }

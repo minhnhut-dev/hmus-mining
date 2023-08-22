@@ -5,7 +5,7 @@ FROM node:alpine AS development
 ENV NODE_ENV development
 
 # Setting up the work directory
-WORKDIR /react-app
+WORKDIR /22424025
 
 # Installing dependencies
 COPY ./package.json /react-app
